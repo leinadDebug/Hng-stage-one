@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const D = new Date();
+            const day = D.getDay();
+            const daysOfTheWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+            const hours = D.getHours().toString().padStart(2, '0');
+            function updateTime() {
+                const minutes = D.getMinutes().toString().padStart(2, '0');
+                const seconds = D.getSeconds().toString().padStart(2, '0');
+                const currentTime = `${hours}:${minutes}:${seconds} UTC`;
+                document.getElementById("currentTimeUTC").innerHTML = `${currentTime}`;
+            }
+
+
+            updateTime(); // Initial call to display the time immediately
+            setInterval(updateTime, 1000);
+            console.log(daysOfTheWeek[day]);
+            document.getElementById("currentDay").innerHTML = daysOfTheWeek[day];
+
+        })
+
+    </script>
+    <nav class="navbar" id="navigation">
+        <a href="">Home</a>
+        <a href="">Projects</a>
+        <a href="">Contact</a>
+    </nav>
+    <main>
+        <div>
+            <img src="./assets/Screenshot 2023-07-20 124331.png" class="profileImg" alt="profileImg" />
+            <h1>Daniel Akujuaobi</h1>
+        </div>
+
+        <p class="intro">
+            I am Daniel Akujuaobi, a dedicated frontend developer proficient in a
+            variety of web technologies from the MERN stack. Currently, I am
+            majoring in Computer Science at university, consistently achieving
+            excellent grades. My passion for frontend development drives me to
+            create high-quality, interactive user interfaces and seamless API
+            integrations.
+        </p>
+        <section>
+            <div>
+                <p>
+                    <span>My Background</span>
+
+                    I have gained substantial experience in frontend development,
+                    working on numerous projects that showcase my ability to build
+                    visually appealing and user-friendly web applications. I continually
+                    challenge myself with code challenges and algorithms during my
+                    leisure time to sharpen my problem-solving skills and stay updated
+                    with the latest trends in technology.
+                </p>
+
+                <p>
+                    <span>My Professional Goals</span>
+                <ol>
+                    <li>
+                        Master Full-Stack Development Objective: Transition from a frontend
+                        developer to a full-stack developer. Timeline: Within the next 12
+                        months. Plan: Complete advanced backend development courses. Work on
+                        full-stack projects involving both frontend and backend
+                        technologies. Gain proficiency in server-side frameworks and
+                        databases.
+                    </li>
+                    <li>
+                        Enhance Frontend Expertise Objective: Develop superior
+                        frontend skills to create exceptional UI/UX. Timeline: Ongoing.
+                        Plan: Continue practicing advanced CSS, JavaScript, and frontend
+                        frameworks like React. Focus on performance optimization and
+                        accessibility. Experiment with new frontend tools and libraries.
+                    </li>
+                    <li>
+                        Improve API Integration Skills Objective: Achieve seamless
+                        integration of REST APIs and GraphQL. Timeline: Within the next 6
+                        months. Plan: Build projects that require complex API integrations.
+                        Study best practices for API security and performance. Learn and
+                        implement GraphQL for efficient data fetching. </li>
+                    <li> Contribute to Open
+                        Source Objective: Give back to the community by contributing to
+                        open-source projects. Timeline: Within the next 2 years. Plan:
+                        Identify and contribute to projects that align with my expertise.
+                        Collaborate with other developers to enhance my coding skills.
+                        Document and share my learning experiences with the community.</li>
+                    <li>
+                        Expand Knowledge in Emerging Technologies Objective: Stay ahead by
+                        learning and implementing emerging technologies. Timeline: Ongoing.
+                        Plan: Explore technologies like Progressive Web Apps (PWAs),
+                        WebAssembly, and AI integration in web development. Attend tech
+                        conferences, webinars, and workshops. Participate in hackathons to
+                        apply new technologies in real-world scenarios.
+                    </li>
+                </ol>
+                </p>
+                </p>
+
+
+                <div class="projects">
+                    <img src="./assets/img1.png" class="img1" />
+                    <img src="./assets/img3.png" class="img3" />
+                    <img src="./assets/img4.png" class="img4" />
+                    <img src="./assets/img2.png" class="img2" />
+                </div>
+
+            </div>
+
+            <div class="conclusion">
+                <h4> Requirement for the Hng internship:</h4>
+                <ol>
+                    <li>Slack username is <a data-testid="slackDisplayName">@L3</a></li>
+                    <li>Today's date is <h5 id="currentTimeUTC" data-testid="currentTimeUTC"></h5>
+                    </li>
+                    <li>Today's date is <h5 id="currentDay" data-testid="currentDay"></h5>
+                    </li>
+                    <li>Slack email is <a data-testid="slackEmail">akujuaobidaniel@gmail.com</a></li>
+                    <li>This is the <a href="http://hng.tech/learn" data-testid="hngLink">Hng Link</a></li>
+                    <li>This is the <a href="http://keyword.dog/" data-testid="keywordLink">keywordLink</a></li>
+                    <li>This is the <a href="http://scrapeanyweb.site/"
+                            data-testid="scrapeanywebLink">scrapeanywebLink</a></li>
+                    <li>
+                        <div class="slackProfilePicture"><img src="./assets/leinad.png"
+                                data-testid="slackProfilePicture"></div>
+                    </li>
+
+                </ol>
+
+            </div>
+        </section>
+    </main>
+    <footer>copyright &#169; leinaddebug 2024. All rights reserved</footer>
+</body>
+
+</html>
